@@ -1,0 +1,28 @@
+# Minimal staging configuration for Retraced
+# Only override dependency configurations
+
+auditlog:
+  # Database configuration for staging
+  postgresDatabase: "retraced-staging"
+  postgresHost: "placeholder"
+  postgresPassword: "placeholder"  # Will be overridden by --set
+  postgresPort: "5432"
+  postgresUser: "postgres"
+
+  
+  # Elasticsearch with authentication for Elastic Cloud
+  elasticsearchNodes: "placeholder"  # Will be overridden by --set
+  
+  # Environment
+  # stage: "staging"
+  # retracedApiBase: "https://your-staging-domain.com/auditlog"  # <- CHANGE THIS
+
+# Fix cron image tag inconsistency (remove the 'v' prefix)
+cron:
+  cron:
+    image:
+      tag: "1.12.1"
+
+# # Environment
+# stage: "staging"
+# retracedApiBase: "https://your-staging-domain.com/auditlog" 
