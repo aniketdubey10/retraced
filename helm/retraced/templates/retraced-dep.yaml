@@ -53,8 +53,9 @@ stringData:
     | quote }}
   POSTGRES_PORT: {{ required "auditlog.postgresPort is required" .Values.auditlog.postgresPort
     | quote }}
-  POSTGRES_USER: {{ required "auditlog.postgresUser is required" .Values.auditlog.postgresUser
-    | quote }}
+  POSTGRES_USER: {{ required "auditlog.postgresUser is required" .Values.auditlog.postgresUser | quote }}
+  POSTGRES_SSL: "true"
+  NODE_TLS_REJECT_UNAUTHORIZED: "0"
   PROCESSOR_TOKEN: {{ .Values.auditlog.processorToken | quote }}
   RETRACED_API_BASE: {{ required "auditlog.retracedApiBase is required" .Values.auditlog.retracedApiBase
     | quote }}

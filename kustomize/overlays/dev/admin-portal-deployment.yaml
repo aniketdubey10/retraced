@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: admin-portal
-          image: boxyhq/jackson:tagwillbereplaced
+          # image: boxyhq/jackson:tagwillbereplaced
+          image: boxyhq/jackson:1.30.0
           imagePullPolicy: IfNotPresent
           startupProbe:
             httpGet:
