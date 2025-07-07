@@ -1,6 +1,8 @@
 # Minimal staging configuration for Retraced
 # Only override dependency configurations
 
+api:
+  type: ClusterIP
 auditlog:
   # Database configuration for staging
   postgresDatabase: "retraced-staging"
