@@ -5,7 +5,7 @@ api:
   type: ClusterIP
 auditlog:
   # Database configuration for staging
-  postgresDatabase: "retraced-staging"
+  postgresDatabase: "placeholder" # Will be overridden by --set
   postgresHost: "placeholder"
   postgresPassword: "placeholder"  # Will be overridden by --set
   postgresPort: "5432"

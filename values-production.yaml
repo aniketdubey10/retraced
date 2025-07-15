@@ -1,0 +1,23 @@
+# Production configuration for Retraced
+api:
+  type: ClusterIP
+auditlog:
+  # Database configuration for production
+  postgresDatabase: "placeholder"
+  postgresHost: "placeholder"
+  postgresPassword: "placeholder"  # Raw password for main application
+  postgresPort: "5432"
+  postgresUser: "postgres"
+
+  # Elasticsearch with authentication for Elastic Cloud
+  elasticsearchNodes: "placeholder"
+  
+  # Production environment settings
+  # stage: "production"
+  # retracedApiBase: "https://retraced.redacto.io/auditlog"
+
+# Fix cron image tag inconsistency (remove the 'v' prefix)
+cron:
+  cron:
+    image:
+      tag: "1.12.1" 
