@@ -8,6 +8,8 @@ First, clone this forked repository which contains the necessary fixes and deplo
 ```bash
 git clone https://github.com/aniketdubey10/retraced.git
 cd retraced
+# Switch to the deploy branch
+git checkout deploy
 ```
 
 ## Prerequisites
@@ -58,7 +60,7 @@ cron:
 helm install retraced ./helm/retraced \
   --namespace <NAMESPACE> \
   --values values-<ENV>.yaml \
-  --set-string auditlog.postgresDatabase='<DATABASE_NAME>' \
+  --set-string auditlog.postgresDatabase="<DATABASE_NAME>" \
   --set-string auditlog.postgresHost="<POSTGRES_HOST>" \
   --set-string auditlog.postgresPassword="<RAW_PASSWORD>" \
   --set-string auditlog.elasticsearchNodes="<ELASTICSEARCH_URL>"
