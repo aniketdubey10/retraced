@@ -1,6 +1,8 @@
 # Production configuration for Retraced
 api:
+  replicas: 2
   type: ClusterIP
+
 auditlog:
   # Database configuration for production
   postgresDatabase: "placeholder"
@@ -21,3 +23,14 @@ cron:
   cron:
     image:
       tag: "1.12.1" 
+  replicas: 2
+
+dbutil:
+  dbutil:
+    replicas: 2
+
+nsqd:
+  replicas: 2
+
+processor:
+  replicas: 2
