@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       tier: admin-portal
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
