@@ -32,12 +32,10 @@ dbutil:
     replicas: 2
 
 nsqd:
-  nsqd:
-    replicas: 2
+  replicas: 2
 
 processor:
-  processor:
-    replicas: 2
+  replicas: 2
 # # Environment
 # stage: "staging"
 # retracedApiBase: "https://your-staging-domain.com/auditlog" 
