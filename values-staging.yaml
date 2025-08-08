@@ -2,6 +2,7 @@
 # Only override dependency configurations
 
 api:
+  replicas: 2
   type: ClusterIP
 auditlog:
   # Database configuration for staging
@@ -24,7 +25,19 @@ cron:
   cron:
     image:
       tag: "1.12.1"
+  replicas: 2
 
+dbutil:
+  dbutil:
+    replicas: 2
+
+nsqd:
+  nsqd:
+    replicas: 2
+
+processor:
+  processor:
+    replicas: 2
 # # Environment
 # stage: "staging"
 # retracedApiBase: "https://your-staging-domain.com/auditlog" 
